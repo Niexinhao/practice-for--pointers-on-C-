@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	int count = 0;
+	int ch;
+	while((ch = getchar() != EOF)){
+		if(ch == '{' ) count++;
+		if(ch == '}' ) count--;
+		if(count < 0){
+		printf("errors!\n");
+		return 0;
+		}
+	}
+	if(count == 0){
+		printf("no error!\n");
+		return 0;
+		}
+	else 
+		printf("errors!\n");
+	system("pause");
+	return 0;
+	
+}
